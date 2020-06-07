@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './nav/Navigation';
 import Slider from './carousel/Slider';
+import Map from './map/Map';
 
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
           <Route path="/order" component={order}/> */}
 
       </Switch>
+      <Map />
     </div>
   </Router>
 );
