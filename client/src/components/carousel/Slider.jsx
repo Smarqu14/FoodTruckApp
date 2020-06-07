@@ -51,7 +51,7 @@ export default class Slider extends Component {
     return (
       <div className="slider">
         <LeftArrow />
-        <img src={this.state.images[1]} />
+        <img src={this.state.images[0]} />
         <RightArrow />
       </div>
     );

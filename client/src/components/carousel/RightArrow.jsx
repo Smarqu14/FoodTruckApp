@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const RightArrow = ({ onClick }) => (
   <S.Button
     type="button"
     onClick={onClick}
   >
-    <span className="fa fa-2x fa-angle-left" />
+    <FontAwesomeIcon icon={faAngleRight} size="2x" />
   </S.Button>
 );
 
@@ -23,6 +26,10 @@ S.Button = styled.button`
   transform: translateY(-50%);
   transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
   right: 32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
 
   &:focus {
     outline: 0;
