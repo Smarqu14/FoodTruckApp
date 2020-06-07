@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Navitem from './NavItem';
+import OrderButton from './OrderButton';
+
 
 class Navigation extends Component {
   constructor(props) {
@@ -25,7 +27,7 @@ class Navigation extends Component {
           <Navitem item="Menu" tolink="/menu" active={this.activateitem} />
           <Navitem item="Home" tolink="/" active={this.activateitem} />
           <Navitem item="Book Event" tolink="/booking" active={this.activateitem} />
-          <Navitem item="Order" tolink="/order" active={this.activateitem} />
+          <OrderButton item="Order" tolink="/order" active={this.activateitem} />
         </ul>
       </nav>
     );

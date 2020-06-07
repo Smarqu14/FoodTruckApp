@@ -7,7 +7,7 @@
 }
 
 body {
-  background: rgba(34, 193, 195, 1);
+  background: rgba(255, 255, 255, 1);
 }
 /* --------------------------- Navbar */
 .menu {
@@ -16,21 +16,37 @@ body {
 }
 
 nav {
-  background: #333;
+  background: rgba(255, 255, 255, 1);
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  padding-top: 5px;
 }
 
 nav a {
   text-decoration: none;
   text-align: center;
-  color: white;
+  color:#113760;
   display: block;
   padding: 10px;
+  margin: 20px;
+  font-size: 25px;
 }
+
+@media screen and (min-width: 768px) {
+  .slider {
+    
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav li {
+    flex: 1 0;
+  } 
+
 /* ----------------------- Carousel */
 .slider {
   max-width: 100%;
@@ -42,14 +58,6 @@ img {
   height: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  nav li {
-    flex: 1 0;
-  }
 }
 
 /* -------------------------ButtonOrder */
