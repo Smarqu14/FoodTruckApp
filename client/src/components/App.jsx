@@ -18,7 +18,7 @@ const App = () => (
           <Route path="/order" component={order}/> */}
 
       </Switch>
-      <Map />
+      {/* <Map /> */}
     </div>
   </Router>
 );
