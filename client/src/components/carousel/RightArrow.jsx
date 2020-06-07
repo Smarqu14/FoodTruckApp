@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-const RightArrow = ({ onClick }) => (
+const RightArrow = ({ handleNextImage }) => (
   <S.Button
     type="button"
-    onClick={onClick}
+    onClick={handleNextImage}
   >
     <FontAwesomeIcon icon={faAngleRight} size="2x" />
   </S.Button>

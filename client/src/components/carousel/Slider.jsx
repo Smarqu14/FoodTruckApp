@@ -48,9 +48,9 @@ export default class Slider extends Component {
     const { images, currentIdx } = this.state;
     return (
       <div className="slider">
-        <LeftArrow onClick={this.handlePrevImage} />
+        <LeftArrow handlePrevImage={this.handlePrevImage} />
         <img src={images[currentIdx]} alt="food images" />
-        <RightArrow onClick={this.handleNextImage} />
+        <RightArrow handleNextImage={this.handleNextImage} />
         <div className="image_order_btn">
           <OrderButton />
         </div>

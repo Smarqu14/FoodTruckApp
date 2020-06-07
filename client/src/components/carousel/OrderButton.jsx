@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const OrderButton = ({ onClick }) => (
-  <S.Button type="button" onClick={onClick}>
+const OrderButton = () => (
+  <S.Button type="button">
     Order Now
   </S.Button>
 );
@@ -14,8 +14,8 @@ S.Button = styled.button`
   position: absolute;
   top: 85%;
   color: white;
-  font-size: 18px;
-  height: 50px;
+  font-size: 20px;
+  height: 40px;
   width: 150px;
   border-radius: 10px;
   border: none;

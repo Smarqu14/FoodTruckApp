@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 
-const LeftArrow = ({ onClick }) => (
+const LeftArrow = ({ handlePrevImage }) => (
   <S.Button
     type="button"
-    onClick={onClick}
+    onClick={handlePrevImage}
   >
     <span>
       <FontAwesomeIcon icon={faAngleLeft} size="2x" />
