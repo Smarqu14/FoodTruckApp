@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navitem from './NavItem';
 
-
 class Navigation extends Component {
   constructor(props) {
     super(props);

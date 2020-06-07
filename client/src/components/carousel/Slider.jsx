@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RightArrow from './RightArrow';
 import LeftArrow from './LeftArrow';
+import OrderButton from './OrderButton';
 
 export default class Slider extends Component {
   constructor(props) {
@@ -8,8 +9,6 @@ export default class Slider extends Component {
     this.state = {
       currentIdx: 0,
       images: [
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/11.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/10.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
@@ -18,7 +17,6 @@ export default class Slider extends Component {
         'https://freetablephotos.s3-us-west-1.amazonaws.com/6.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/9.jpg',
       ],
     };
     this.handlePrevImage = this.handlePrevImage.bind(this);
@@ -53,6 +51,9 @@ export default class Slider extends Component {
         <LeftArrow onClick={this.handlePrevImage} />
         <img src={images[currentIdx]} alt="food images" />
         <RightArrow onClick={this.handleNextImage} />
+        <div className="image_order_btn">
+          <OrderButton />
+        </div>
       </div>
     );
   }
