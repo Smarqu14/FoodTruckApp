@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navitem from './NavItem';
+import NavItem from './NavItem';
 import OrderButton from './OrderButton';
 
 
@@ -23,10 +23,10 @@ class Navigation extends Component {
     return (
       <nav>
         <ul className="menu">
-          <Navitem item="Hours" tolink="/hours" active={this.activateitem} />
-          <Navitem item="Menu" tolink="/menu" active={this.activateitem} />
-          <Navitem item="Home" tolink="/" active={this.activateitem} />
-          <Navitem item="Book Event" tolink="/booking" active={this.activateitem} />
+          <NavItem item="Hours" tolink="/hours" active={this.activateitem} />
+          <NavItem item="Menu" tolink="/menu" active={this.activateitem} />
+          <NavItem item="Home" tolink="/" active={this.activateitem} />
+          <NavItem item="Book Event" tolink="/booking" active={this.activateitem} />
           <OrderButton item="Order Now" tolink="/order" active={this.activateitem} />
         </ul>
       </nav>

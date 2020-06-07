@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-const Navitem = ({ tolink, active, item }) => (
+const NavItem = ({ tolink, active, item }) => (
   <li className="item active">
     <NavLink to={tolink} onClick={active}>
       {item}
@@ -11,4 +11,4 @@ const Navitem = ({ tolink, active, item }) => (
   </li>
 );
 
-export default Navitem;
+export default NavItem;
