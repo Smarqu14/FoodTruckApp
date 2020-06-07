@@ -9,6 +9,7 @@ export default class Slider extends Component {
       currentIdx: 0,
       images: [
         'https://freetablephotos.s3-us-west-1.amazonaws.com/11.jpg',
+        'https://freetablephotos.s3-us-west-1.amazonaws.com/10.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
@@ -19,13 +20,12 @@ export default class Slider extends Component {
         'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
         'https://freetablephotos.s3-us-west-1.amazonaws.com/9.jpg',
       ],
-      image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/11.jpg',
     };
-    this.prevImage = this.prevImage.bind(this);
-    this.nextImage = this.nextImage.bind(this);
+    this.handlePrevImage = this.handlePrevImage.bind(this);
+    this.handleNextImage = this.handleNextImage.bind(this);
   }
 
-  prevImage() {
+  handlePrevImage() {
     const { images, currentIdx } = this.state;
     const lastIdx = images.length - 1;
     const resetIdx = currentIdx === 0;
@@ -36,23 +36,23 @@ export default class Slider extends Component {
     });
   }
 
-  nextImage() {
+  handleNextImage() {
     const { images, currentIdx } = this.state;
     const lastIdx = images.length - 1;
     const resetIdx = currentIdx === lastIdx;
     const idx = resetIdx ? 0 : currentIdx + 1;
-
     this.setState({
       currentIdx: idx,
     });
   }
 
   render() {
+    const { images, currentIdx } = this.state;
     return (
       <div className="slider">
-        <LeftArrow />
-        <img src={this.state.images[0]} />
-        <RightArrow />
+        <LeftArrow onClick={this.handlePrevImage} />
+        <img src={images[currentIdx]} alt="food images" />
+        <RightArrow onClick={this.handleNextImage} />
       </div>
     );
   }
