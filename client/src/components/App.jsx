@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './nav/Navigation';
-import Slider from './ImageCarousel/Slider';
+import Slider from './carousel/Slider';
 
 
 const App = () => (

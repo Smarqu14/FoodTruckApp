@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import RightArrow from './RightArrow';
+import LeftArrow from './LeftArrow';
 
 export default class Slider extends Component {
   constructor(props) {
@@ -48,7 +50,9 @@ export default class Slider extends Component {
   render() {
     return (
       <div className="slider">
-         <img src={this.state.images[5]}></img> 
+        <LeftArrow />
+        <img src={this.state.images[1]} />
+        <RightArrow />
       </div>
     );
   }
