@@ -4,7 +4,6 @@ import LeftArrow from './LeftArrow';
 import OrderButton from './OrderButton';
 import data from '../../data/imagesData';
 
-
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -40,18 +39,42 @@ export default class Home extends Component {
   render() {
     const { images, currentIdx } = this.state;
     return (
-      <div className="slider">
-        <LeftArrow handlePrevImage={this.handlePrevImage} />
-        <img src={images[currentIdx]} alt="food images" />
-        <RightArrow handleNextImage={this.handleNextImage} />
-        <div className="image_order_btn">
-          <OrderButton />
+      <div>
+        <div className="banner">
+          <LeftArrow handlePrevImage={this.handlePrevImage} />
+          <img src={images[currentIdx]} alt="food images" />
+          <RightArrow handleNextImage={this.handleNextImage} />
+          <div className="image_order_btn">
+            <OrderButton />
+          </div>
         </div>
-        <div>
-          <h1>
-            About us
-          </h1>
-          <p>We are a taco truck that deliveres quality food and a great experience. Food as it should be. Food should taste good. It should feel good. It should do good things for you and the world around you.</p>
+
+        <div className="banner">
+          <h1>About us</h1>
+          <p>
+            We are a taco truck that deliveres quality food and a great
+            experience. Food as it should be. Food should taste good. It should
+            feel good. It should do good things for you and the world around
+            you.
+          </p>
+          <img src={images[6]} alt="food images" />
+          <div className="image_order_btn">
+            <OrderButton />
+          </div>
+
+          <div className="banner">
+            <h1>Catering</h1>
+            <p>
+              We are a taco truck that deliveres quality food and a great
+              experience. Food as it should be. Food should taste good. It
+              should feel good. It should do good things for you and the world
+              around you.
+            </p>
+            <img src={images[7]} alt="food images" />
+            <div className="image_order_btn">
+              <OrderButton />
+            </div>
+          </div>
         </div>
       </div>
     );
