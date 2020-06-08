@@ -38,18 +38,21 @@ export default class Home extends Component {
 
   render() {
     const { images, currentIdx } = this.state;
+    const smallImg = 'https://freetablephotos.s3-us-west-1.amazonaws.com/10.png'
     return (
       <div>
         <div className="banner">
           <LeftArrow handlePrevImage={this.handlePrevImage} />
-          <img src={images[currentIdx]} alt="food images" />
+          <img id="slider" src={images[currentIdx]} alt="food images" />
           <RightArrow handleNextImage={this.handleNextImage} />
           <div className="image_order_btn">
             <OrderButton />
           </div>
         </div>
 
-        <div className="banner">
+        
+
+        {/* <div className="banner">
           <h1>About us</h1>
           <p>
             We are a taco truck that deliveres quality food and a great
@@ -74,8 +77,8 @@ export default class Home extends Component {
             <div className="image_order_btn">
               <OrderButton />
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     );
   }

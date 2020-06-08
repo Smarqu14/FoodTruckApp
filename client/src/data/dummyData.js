@@ -287,7 +287,7 @@ const data = [
   {
     item: 'Enchiladas',
     description: 'Choice of meat with rice, beans, cheese and salsa',
-    image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/6.jpg',
+    image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
     price: 12.99,
     meats: [
       { meat: 'Carne Asada ' },
