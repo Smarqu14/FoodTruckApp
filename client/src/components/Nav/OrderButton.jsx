@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-const OrderButton = ({ tolink, active, item }) => (
-  <li className="item active">
-    <NavLink to={tolink} onClick={active}>
-      <S.Button>{item}</S.Button>
-    </NavLink>
-  </li>
+const OrderButton = () => (
+  <NavLink to="/order">
+    <S.Button>Order Now!</S.Button>
+  </NavLink>
 );
 
 export default OrderButton;

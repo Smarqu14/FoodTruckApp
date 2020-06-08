@@ -10,6 +10,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -25,5 +26,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.es6'],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
 };

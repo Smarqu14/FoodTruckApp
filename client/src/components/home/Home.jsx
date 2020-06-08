@@ -2,22 +2,15 @@ import React, { Component } from 'react';
 import RightArrow from './RightArrow';
 import LeftArrow from './LeftArrow';
 import OrderButton from './OrderButton';
+import data from '../../data/imagesData';
 
-export default class Slider extends Component {
+
+export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       currentIdx: 0,
-      images: [
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/4.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/5.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/6.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg',
-        'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-      ],
+      images: data,
     };
     this.handlePrevImage = this.handlePrevImage.bind(this);
     this.handleNextImage = this.handleNextImage.bind(this);
@@ -53,6 +46,12 @@ export default class Slider extends Component {
         <RightArrow handleNextImage={this.handleNextImage} />
         <div className="image_order_btn">
           <OrderButton />
+        </div>
+        <div>
+          <h1>
+            About us
+          </h1>
+          <p>We are a taco truck that deliveres quality food and a great experience. Food as it should be. Food should taste good. It should feel good. It should do good things for you and the world around you.</p>
         </div>
       </div>
     );

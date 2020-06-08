@@ -1,26 +1,33 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+import {
+  BrowserRouter, Route, Switch, Redirect,
+} from 'react-router-dom';
 import Navigation from './nav/Navigation';
-import Slider from './carousel/Slider';
-import Map from './map/Map';
+import Home from './home/Home';
+// import Map from './map/Map';
+import ProductList from './menu/ProductList';
+import Hours from './hours/Hours';
+import Booking from './book/Booking';
+import Order from './order/Order';
 
-
-const App = () => (
-  <Router>
+const App = ({ data }) => (
+  <BrowserRouter>
     <div className="App">
       <Navigation />
-      <Slider />
       <Switch>
-        {/* <Route path="/" component={App} exact /> */}
-        {/* <Route path="/home" component={home}/>
-          <Route path="/hours" component={hours}/>
-          <Route path="/booking" component={booking}/>
-          <Route path="/order" component={order}/> */}
-
+        <Route
+          path="/menu"
+          render={(props) => <ProductList {...props} data={data} />}
+        />
+        <Route path="/" component={Home} exact />
+        <Route path="/hours" component={Hours} exact />
+        <Route path="/booking" component={Booking} exact />
+        <Route path="/order" component={Order} exact />
+        <Redirect to="/" />
       </Switch>
       {/* <Map /> */}
     </div>
-  </Router>
+  </BrowserRouter>
 );
 
 export default App;
