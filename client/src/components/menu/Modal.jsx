@@ -12,7 +12,7 @@ import TakeMoney from './Stripe';
 
 
 const Modal = ({
-  show, handleModal, itemInfo, handleToken,
+  show, handleModal, itemInfo,
 }) => (
   <div className={show ? 'modal-open' : <></>}>
     <div className="modal-wrapper">
@@ -37,8 +37,13 @@ const Modal = ({
             </div>
             <textarea placeholder="SPECIAL INSTRUCTIONS" rows="10" cols="50" />
           </div>
-          {/* <S.Add>Add to chart</S.Add> */}
-          <TakeMoney />
+          <div>
+            <h3>
+              Total:
+              ${itemInfo.price}
+            </h3>
+          </div>
+          <TakeMoney itemInfo={itemInfo} />
         </div>
         <div className="modal-right">
           <div className="modal-right-column">
