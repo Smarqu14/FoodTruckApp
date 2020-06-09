@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlusCircle,
   faMinusCircle,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
+import TakeMoney from './Stripe';
 
-const Modal = ({ show, handleModal, itemInfo }) => (
+
+const Modal = ({
+  show, handleModal, itemInfo, handleToken,
+}) => (
   <div className={show ? 'modal-open' : <></>}>
     <div className="modal-wrapper">
       <div className="modal-row">
@@ -32,7 +37,8 @@ const Modal = ({ show, handleModal, itemInfo }) => (
             </div>
             <textarea placeholder="SPECIAL INSTRUCTIONS" rows="10" cols="50" />
           </div>
-          <S.Add>Add to chart</S.Add>
+          {/* <S.Add>Add to chart</S.Add> */}
+          <TakeMoney />
         </div>
         <div className="modal-right">
           <div className="modal-right-column">
@@ -75,8 +81,8 @@ S.Exit = styled.button`
   border: none;
   outline: none;
   box-shadow: none;
-  float:left;
-  margin-top:10px;
+  float: left;
+  margin-top: 10px;
 
   &:focus {
     outline: 0;
@@ -91,9 +97,9 @@ S.Add = styled.button`
   opacity: 0.75;
   transform: translateY(-50%);
   transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
-  background: rgb(76, 163, 175);;
+  background: rgb(76, 163, 175);
   border: none;
-  color:black;
+  color: black;
   outline: none;
   box-shadow: none;
   &:focus {
