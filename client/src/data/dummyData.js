@@ -1,9 +1,9 @@
 const data = [
   {
-    item: 'Regular Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    item: 'Taco',
+    description: 'A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling. The tortilla is then folded around the filling and eaten by hand.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-    price: 12.99,
+    price: 5.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -57,10 +57,10 @@ const data = [
     specialInstructions: 'Dressing on the side? No Pickles. Let us know!',
   },
   {
-    item: 'Baby Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    item: 'Burrito',
+    description: 'A burrito is a dish in Mexican and Tex-Mex cuisine consisting of a flour tortilla wrapped into a sealed cylindrical shape around various ingredients. The tortilla is sometimes lightly grilled or steamed to soften it, make it more pliable, and allow it to adhere to itself when wrapped.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 15.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -115,9 +115,9 @@ const data = [
   },
   {
     item: 'Super Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Burritos are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-    price: 12.99,
+    price: 17.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -172,9 +172,9 @@ const data = [
   },
   {
     item: 'Carne Asada a la Parria',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Carne asada is a dish of grilled and sliced beef, usually skirt steak, sirloin steak, tenderloin steak, or rib steak. It is usually cooked with a marinade and some searing to impart a charred flavor. Carne asada can be served as a main dish or as an ingredient in other dishes',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 18.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -229,9 +229,9 @@ const data = [
   },
   {
     item: 'Tortas',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Torta is a dish of grilled and sliced beef, usually skirt steak, sirloin steak, tenderloin steak, or rib steak. It is usually cooked with a marinade and some searing to impart a charred flavor. Carne asada can be served as a main dish or as an ingredient in other dishes',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-    price: 12.99,
+    price: 10.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -286,9 +286,9 @@ const data = [
   },
   {
     item: 'Enchiladas',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Enchilada is a dish of grilled and sliced beef, usually skirt steak, sirloin steak, tenderloin steak, or rib steak. It is usually cooked with a marinade and some searing to impart a charred flavor. Carne asada can be served as a main dish or as an ingredient in other dishes',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-    price: 12.99,
+    price: 5.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -343,9 +343,9 @@ const data = [
   },
   {
     item: 'Tostadas',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Tostada is a dish of grilled and sliced beef, usually skirt steak, sirloin steak, tenderloin steak, or rib steak. It is usually cooked with a marinade and some searing to impart a charred flavor. Carne asada can be served as a main dish or as an ingredient in other dishes',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 30.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -400,9 +400,9 @@ const data = [
   },
   {
     item: 'Tacos',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Taco is  a dish of grilled and sliced beef, usually skirt steak, sirloin steak, tenderloin steak, or rib steak. It is usually cooked with a marinade and some searing to impart a charred flavor. Carne asada can be served as a main dish or as an ingredient in other dishes',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 13.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -457,9 +457,9 @@ const data = [
   },
   {
     item: 'Regular Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Burritos are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 20.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -516,7 +516,7 @@ const data = [
     item: 'Baby Burrito',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-    price: 12.99,
+    price: 19.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -571,9 +571,9 @@ const data = [
   },
   {
     item: 'Super Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Super burritos are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 16.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -628,9 +628,9 @@ const data = [
   },
   {
     item: 'Carne Asada a la Parria',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Carne asada A la parria are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-    price: 12.99,
+    price: 4.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -687,7 +687,7 @@ const data = [
     item: 'Tortas',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg',
-    price: 12.99,
+    price: 10.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -801,7 +801,7 @@ const data = [
     item: 'Tostadas',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-    price: 12.99,
+    price: 2.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -858,7 +858,7 @@ const data = [
     item: 'Tacos',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg',
-    price: 12.99,
+    price: 22.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -913,9 +913,9 @@ const data = [
   },
   {
     item: 'Regular Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Burrito often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-    price: 12.99,
+    price: 1.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -972,7 +972,7 @@ const data = [
     item: 'Baby Burrito',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-    price: 12.99,
+    price: 3.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -1027,9 +1027,9 @@ const data = [
   },
   {
     item: 'Super Burrito',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
-    price: 12.99,
+    price: 122.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -1086,7 +1086,7 @@ const data = [
     item: 'Carne Asada a la Parria',
     description: 'Choice of meat with rice, beans, cheese and salsa',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-    price: 12.99,
+    price: 22.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -1198,9 +1198,9 @@ const data = [
   },
   {
     item: 'Enchiladas',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Enchiladas are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 123.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -1255,9 +1255,9 @@ const data = [
   },
   {
     item: 'Tostadas',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Tostadas are often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-    price: 12.99,
+    price: 10.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
@@ -1312,9 +1312,9 @@ const data = [
   },
   {
     item: 'Tacos',
-    description: 'Choice of meat with rice, beans, cheese and salsa',
+    description: 'Taquitos often eaten by hand, as their tight wrapping keeps the ingredients together. Burritos can also be served "wet", that is to say covered in a savory and spicy sauce, where they would be eaten with a fork and knife.',
     image: 'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
-    price: 12.99,
+    price: 13.99,
     meats: [
       { meat: 'Carne Asada ' },
       { meat: 'Pollo Asada' },
