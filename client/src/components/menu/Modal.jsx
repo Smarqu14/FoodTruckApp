@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faPlusCircle,
+  faMinusCircle,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ({ show, handleModal, itemInfo }) => (
-
   <div className={show ? 'modal-open' : <></>}>
     <div className="modal-wrapper">
       <div className="modal-row">
         <div className="modal-left">
           <div className="modal-left-column">
-            <button type="button" onClick={handleModal}>Exit</button>
+            <S.Exit type="button" onClick={handleModal}>
+              <FontAwesomeIcon icon={faTimes} size="2x" />
+            </S.Exit>
             <h2>{itemInfo.item}</h2>
             <div className="modal-description">
               <p>{itemInfo.description}</p>
@@ -38,14 +43,13 @@ const Modal = ({ show, handleModal, itemInfo }) => (
 );
 export default Modal;
 
-
 const S = {};
 S.Button = styled.button`
   color: #111;
   cursor: pointer;
-  opacity: .75;
+  opacity: 0.75;
   transform: translateY(-50%);
-  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
   background: transparent;
   border: none;
   outline: none;
@@ -56,6 +60,27 @@ S.Button = styled.button`
   }
 
   &:hover {
-    opacity: .5;
+    opacity: 0.5;
+  }
+`;
+S.Exit = styled.button`
+  color: #111;
+  cursor: pointer;
+  opacity: 0.75;
+  transform: translateY(-50%);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  float:left;
+  margin-top:10px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 `;
