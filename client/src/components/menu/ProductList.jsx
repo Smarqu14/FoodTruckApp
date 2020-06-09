@@ -22,7 +22,7 @@ export default class ProductList extends Component {
   }
 
   render() {
-    const { data, modal, itemInfo} = this.state;
+    const { data, modal, itemInfo } = this.state;
     const foodItem = data.map((item, i) => (
       <Product key={i} itemInfo={item} handleModal={this.handleModal} />
     ));

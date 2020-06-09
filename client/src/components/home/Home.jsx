@@ -38,7 +38,6 @@ export default class Home extends Component {
 
   render() {
     const { images, currentIdx } = this.state;
-    const smallImg = 'https://freetablephotos.s3-us-west-1.amazonaws.com/10.png'
     return (
       <div>
         <div className="banner">
@@ -49,8 +48,6 @@ export default class Home extends Component {
             <OrderButton />
           </div>
         </div>
-
-        
 
         {/* <div className="banner">
           <h1>About us</h1>
