@@ -8,7 +8,7 @@ const Menu = ({ data }) => (
     <div className="row">
       <div className="left">
         <div className="left-column">
-          <SideMenu />
+          <SideMenu data={data} />
         </div>
       </div>
       <div className="right">

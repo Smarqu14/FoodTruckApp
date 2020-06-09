@@ -1,4 +1,7 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
+import axios from 'axios';
 import RightArrow from './RightArrow';
 import LeftArrow from './LeftArrow';
 import OrderButton from './OrderButton';
@@ -13,6 +16,27 @@ export default class Home extends Component {
     };
     this.handlePrevImage = this.handlePrevImage.bind(this);
     this.handleNextImage = this.handleNextImage.bind(this);
+    this.setData = this.setData.bind(this);
+    this.handleError = this.handleError.bind(this);
+    // this.gettingGroups = this.gettingGroups.bind(this);
+  }
+
+
+ 
+  // gettingGroups() {
+  //   axios.get('/api/images').then(this.setData).catch(this.handleError);
+  // }
+
+  setData({ data }) {
+    this.setState({ images: data });
+  }
+
+  handleError(error) {
+    if (error) {
+      console.error(error);
+    } else {
+      ('success');
+    }
   }
 
   handlePrevImage() {
@@ -39,44 +63,50 @@ export default class Home extends Component {
   render() {
     const { images, currentIdx } = this.state;
     return (
-      <div>
-        <div className="banner">
-          <LeftArrow handlePrevImage={this.handlePrevImage} />
-          <img id="slider" src={images[currentIdx]} alt="food images" />
-          <RightArrow handleNextImage={this.handleNextImage} />
-          <div className="image_order_btn">
-            <OrderButton />
-          </div>
-        </div>
-
-        {/* <div className="banner">
-          <h1>About us</h1>
-          <p>
-            We are a taco truck that deliveres quality food and a great
-            experience. Food as it should be. Food should taste good. It should
-            feel good. It should do good things for you and the world around
-            you.
-          </p>
-          <img src={images[6]} alt="food images" />
-          <div className="image_order_btn">
-            <OrderButton />
-          </div>
-
-          <div className="banner">
-            <h1>Catering</h1>
-            <p>
-              We are a taco truck that deliveres quality food and a great
-              experience. Food as it should be. Food should taste good. It
-              should feel good. It should do good things for you and the world
-              around you.
-            </p>
-            <img src={images[7]} alt="food images" />
-            <div className="image_order_btn">
-              <OrderButton />
+      <>
+        {images.length > 0 ? (
+          <div>
+            <div className="banner">
+              <LeftArrow handlePrevImage={this.handlePrevImage} />
+              <img id="slider" src={images[currentIdx]} alt="food images" />
+              <RightArrow handleNextImage={this.handleNextImage} />
+              <div className="image_order_btn">
+                <OrderButton />
+              </div>
             </div>
-          </div> */}
-        {/* </div> */}
-      </div>
+          </div>
+        ) : (
+          <p>Loading</p>
+        )}
+      </>
     );
   }
 }
+
+// { /* <div className="banner">
+//           <h1>About us</h1>
+//           <p>
+//             We are a taco truck that deliveres quality food and a great
+//             experience. Food as it should be. Food should taste good. It should
+//             feel good. It should do good things for you and the world around
+//             you.
+//           </p>
+//           <img src={images[6]} alt="food images" />
+//           <div className="image_order_btn">
+//             <OrderButton />
+//           </div>
+
+//           <div className="banner">
+//             <h1>Catering</h1>
+//             <p>
+//               We are a taco truck that deliveres quality food and a great
+//               experience. Food as it should be. Food should taste good. It
+//               should feel good. It should do good things for you and the world
+//               around you.
+//             </p>
+//             <img src={images[7]} alt="food images" />
+//             <div className="image_order_btn">
+//               <OrderButton />
+//             </div>
+//           </div> */ }
+// { /* </div> */ }

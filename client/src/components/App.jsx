@@ -18,14 +18,14 @@ const App = ({ data }) => (
       <Switch>
         <Route
           path="/menu"
-          // render={(props) => <ProductList {...props} data={data} />}
           render={(props) => <Menu {...props} data={data} />}
         />
         <Route path="/" component={Home} exact />
         <Route path="/hours" component={Hours} exact />
         <Route path="/booking" component={Booking} exact />
-        <Route path="/order" component={Order} exact />
-        <Redirect to="/" />
+        <Route path="/order" component={Order} eact />
+
+        {/* <Redirect to="/" /> */}
       </Switch>
       {/* <Map /> */}
     </div>

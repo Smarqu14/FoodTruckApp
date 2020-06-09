@@ -30,7 +30,7 @@ export default class ProductList extends Component {
     return (
       <div>
         <div className="panel">
-          <h2> Menu</h2>
+          <h2 id="menu-right">  Menu</h2>
           <div className="food-list">
             {foodItem}
           </div>

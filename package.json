@@ -25,6 +25,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "live-server": "^1.2.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.3",
     "pg": "^8.2.1",
     "prop-types": "^15.7.2",
@@ -32,6 +33,7 @@
     "react-dom": "^16.13.1",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.2.0",
+    "react-stripe-checkout": "^2.6.3",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
