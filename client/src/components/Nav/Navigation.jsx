@@ -20,39 +20,58 @@ class Navigation extends Component {
 
   render() {
     return (
-      // <nav>
-      //   <ul className="nav-menu">
-      //     <NavItem item="Hours" tolink="/hours" active={this.activateitem} />
-      //     <NavItem item="Menu" tolink="/menu" active={this.activateitem} />
-      //     <NavItem item="Home" tolink="/" active={this.activateitem} />
-      //     <NavItem item="Book Event" tolink="/booking" active={this.activateitem} />
-      //     <OrderButton item="Order Now" tolink="/order" active={this.activateitem} />
-      //   </ul>
-      // </nav>
-      <nav>
+      <nav className="navbar">
         <ul className="nav-menu">
           <li>
-            <NavLink to="/hours" onClick={this.activateitem}>
+            <NavLink
+              to="/hours"
+              onClick={this.activateitem}
+              activeClassName="navbar__link--active"
+              className="navbar__link"
+              exact
+            >
               Hours
             </NavLink>
           </li>
           <li>
-            <NavLink to="/menu" onClick={this.activateitem}>
+            <NavLink
+              to="/menu"
+              onClick={this.activateitem}
+              activeClassName="navbar__link--active"
+              className="navbar__link"
+              exact
+            >
               Menu
             </NavLink>
           </li>
           <li>
-            <NavLink to="/" onClick={this.activateitem}>
+            <NavLink
+              to="/"
+              onClick={this.activateitem}
+              activeClassName="navbar__link--active"
+              className="navbar__link"
+              exact
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/booking" onClick={this.activateitem}>
+            <NavLink
+              to="/booking"
+              onClick={this.activateitem}
+              activeClassName="navbar__link--active"
+              className="navbar__link"
+              exact
+            >
               Book Event
             </NavLink>
           </li>
           <li>
-            <OrderButton onClick={this.activateitem} />
+            <OrderButton
+              onClick={this.activateitem}
+              activeClassName="navbar__link--active"
+              className="navbar__link"
+            />
           </li>
         </ul>
       </nav>

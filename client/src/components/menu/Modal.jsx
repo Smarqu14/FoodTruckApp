@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,6 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import TakeMoney from './Stripe';
-
 
 const Modal = ({
   show, handleModal, itemInfo,
