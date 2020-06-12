@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import styled from 'styled-components';
 // import OrderButton from './OrderButton';
 
 const Nav = styled.header`
@@ -10,7 +10,7 @@ const Nav = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0px 100px 0;
-  height: 140px;
+  height: 100px;
   margin-bottom: 60px;
   background: #121212;
 
@@ -81,7 +81,7 @@ const Nav = styled.header`
     li {
       margin: 0 15px;
       justify-content: space-between;
-      font-size: 1em;
+      font-size: 0.7em;
       a {
         text-decoration: none;
         font-size: 1em;
@@ -217,7 +217,7 @@ class Navigation extends Component {
             aria-hidden="true"
             onClick={(e) => this.handleToggle(e)}
           />
-          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+          <ul className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
             <NavLink to="/hours" activeClassName="active" exact>
               <li>Hours</li>
             </NavLink>

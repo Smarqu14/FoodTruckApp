@@ -11,7 +11,6 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(bodyParser.json());
 const port = 3000;
 
-
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'), (err) => {
     if (err) {

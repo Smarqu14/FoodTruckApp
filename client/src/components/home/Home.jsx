@@ -21,8 +21,6 @@ export default class Home extends Component {
     // this.gettingGroups = this.gettingGroups.bind(this);
   }
 
-
- 
   // gettingGroups() {
   //   axios.get('/api/images').then(this.setData).catch(this.handleError);
   // }
@@ -65,15 +63,35 @@ export default class Home extends Component {
     return (
       <>
         {images.length > 0 ? (
-          <div>
-            <div className="banner">
-              <LeftArrow handlePrevImage={this.handlePrevImage} />
-              <img id="slider" src={images[currentIdx]} alt="food images" />
-              <RightArrow handleNextImage={this.handleNextImage} />
-              <div className="image_order_btn">
-                <OrderButton />
+          <div className="banner">
+            <section className="lp__grid-3">
+              <div className="lp__grid__item lp__grid-col">
+                <div className="textHolder">
+                  <p>we are people that care about the planet. This is why we only cook organic. 80,88,96,104,112,120,128,136,144,152,160,168,176</p>
+                </div>
+                <div className="lp__gridImage-1" />
+                <div className="image " />
               </div>
-            </div>
+              <div className="lp__grid__item">
+                <div className="lp__subgrid lp__subgrid-sm">
+                  <div>
+                    <p>Food that everyone loves </p>
+                    <p>Always on the go</p>
+                    <p>This is amazing </p>
+                  </div>
+                  <div className="lp__gridImage-2" />
+                </div>
+              </div>
+              <div className="lp__grid__item">
+                <div className="lp__subgrid lp__subgrid-md">
+                  <h1>
+                    <OrderButton />
+                  </h1>
+                  <div className="image lp__gridImage-3" />
+                </div>
+              </div>
+
+            </section>
           </div>
         ) : (
           <p>Loading</p>
@@ -82,31 +100,3 @@ export default class Home extends Component {
     );
   }
 }
-
-// { /* <div className="banner">
-//           <h1>About us</h1>
-//           <p>
-//             We are a taco truck that deliveres quality food and a great
-//             experience. Food as it should be. Food should taste good. It should
-//             feel good. It should do good things for you and the world around
-//             you.
-//           </p>
-//           <img src={images[6]} alt="food images" />
-//           <div className="image_order_btn">
-//             <OrderButton />
-//           </div>
-
-//           <div className="banner">
-//             <h1>Catering</h1>
-//             <p>
-//               We are a taco truck that deliveres quality food and a great
-//               experience. Food as it should be. Food should taste good. It
-//               should feel good. It should do good things for you and the world
-//               around you.
-//             </p>
-//             <img src={images[7]} alt="food images" />
-//             <div className="image_order_btn">
-//               <OrderButton />
-//             </div>
-//           </div> */ }
-// { /* </div> */ }
