@@ -4,18 +4,20 @@ import { NavLink } from 'react-router-dom';
 
 const OrderButton = () => (
   <NavLink to="/order">
-    <S.Button>Order Now!</S.Button>
+    <li>
+      <S.Button>Order Now!</S.Button>
+    </li>
   </NavLink>
 );
 
 export default OrderButton;
 
 const S = {};
-S.Button = styled.div`
+S.Button = styled.a`
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   height: 40px;
-  max-width: 150px !important;
+  max-width: 300px;
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
