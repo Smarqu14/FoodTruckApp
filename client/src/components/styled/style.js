@@ -71,3 +71,6 @@ export const ImageTwoContainer = styled.div`
   height: 100%;
   grid-template-rows: 72px auto;
 `;
+
+
+// ----------------------------
