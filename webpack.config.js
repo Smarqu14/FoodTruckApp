@@ -6,7 +6,7 @@ const DIST_DIR = path.join(__dirname, '/client/dist');
 module.exports = {
   mode: 'development',
   entry: `${SRC_DIR}/index.jsx`,
-  target: 'node',
+  node: { global: true, fs: 'empty' },
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
@@ -19,6 +19,16 @@ module.exports = {
         include: SRC_DIR,
         use: {
           loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: 'url-loader',
         },
       },
     ],

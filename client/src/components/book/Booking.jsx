@@ -1,4 +1,5 @@
 import React from 'react';
+import Calendar from './Calendar';
 
 const Booking = () => (
   <div className="container_booking">
@@ -31,6 +32,7 @@ const Booking = () => (
             placeholder="Write something.."
           />
           <input type="submit" value="Submit" />
+          <Calendar />
         </form>
       </div>
     </div>
