@@ -1,11 +1,16 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-unused-expressions */
 import React, { Component } from 'react';
-import axios from 'axios';
-import RightArrow from './RightArrow';
-import LeftArrow from './LeftArrow';
 import OrderButton from './OrderButton';
-import data from '../../data/imagesData';
+import { data } from '../../data/imagesData';
+import {
+  Wrapper,
+  Section,
+  ImageDiv,
+  ImageDivTwo,
+  ImageDivThree,
+  Griditem,
+  Paragraph,
+  Paragraph2,
+} from '../styled/style';
 
 export default class Home extends Component {
   constructor(props) {
@@ -14,27 +19,10 @@ export default class Home extends Component {
       currentIdx: 0,
       images: data,
     };
-    this.handlePrevImage = this.handlePrevImage.bind(this);
-    this.handleNextImage = this.handleNextImage.bind(this);
-    this.setData = this.setData.bind(this);
-    this.handleError = this.handleError.bind(this);
+    this.handleFirstImage = this.handleFirstImage.bind(this);
   }
 
-
-
-  setData({ data }) {
-    this.setState({ images: data });
-  }
-
-  handleError(error) {
-    if (error) {
-      console.error(error);
-    } else {
-      ('success');
-    }
-  }
-
-  handlePrevImage() {
+  handleFirstImage() {
     const { images, currentIdx } = this.state;
     const lastIdx = images.length - 1;
     const resetIdx = currentIdx === 0;
@@ -45,50 +33,51 @@ export default class Home extends Component {
     });
   }
 
-  handleNextImage() {
-    const { images, currentIdx } = this.state;
-    const lastIdx = images.length - 1;
-    const resetIdx = currentIdx === lastIdx;
-    const idx = resetIdx ? 0 : currentIdx + 1;
-    this.setState({
-      currentIdx: idx,
-    });
-  }
-
   render() {
-    const { images } = this.state;
+    const {
+      images, currentIdx,
+    } = this.state;
     return (
       <>
         {images.length > 0 ? (
-          <div className="banner">
-            <section className="lp__grid-3">
-              <div className="lp__grid__item lp__grid-col">
+          <Wrapper>
+            <Section>
+              <Griditem className="lp__grid-col">
                 <div className="textHolder">
-                  <p>80,88,96,104,112,120,128,136,144,152,160,168,176</p>
+                  <Paragraph>
+                    80,88,96,104,112,120,128,136,144,152,160,168,176
+                  </Paragraph>
                 </div>
-                <div className="lp__gridImage-1" />
-                <div className="image " />
-              </div>
-              <div className="lp__grid__item">
+                <ImageDiv
+                  onClick={this.handleFirstImage}
+                  backgroundImage={images[currentIdx]}
+                />
+              </Griditem>
+              <Griditem>
                 <div className="lp__subgrid lp__subgrid-sm">
                   <div>
-                    <p>Food that will make you come back for more 🤤</p>
-                    <p>This is amazing. THIS IS DELICIOUS.. </p>
+                    <Paragraph2>
+                      {' '}
+                      Food that will make you come back for more.This is
+                      amazing. THIS IS DELICIOUS..
+                      {' '}
+                    </Paragraph2>
                   </div>
-                  <div className="lp__gridImage-2" />
+                  <ImageDivTwo backgroundImage={images[2]} />
                 </div>
-              </div>
-              <div className="lp__grid__item">
+              </Griditem>
+              <Griditem>
                 <div className="lp__subgrid lp__subgrid-md">
                   <h1>
-                    <OrderButton />
+                    <span>
+                      <OrderButton />
+                    </span>
                   </h1>
-                  <div className="image lp__gridImage-3" />
+                  <ImageDivThree backgroundImage={images[3]} />
                 </div>
-              </div>
-
-            </section>
-          </div>
+              </Griditem>
+            </Section>
+          </Wrapper>
         ) : (
           <p>Loading</p>
         )}

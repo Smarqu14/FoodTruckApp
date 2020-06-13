@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types';
 import Booking from '../../book/Booking';
 import Hours from '../../hours/Hours';
 import Home from '../../home/Home';

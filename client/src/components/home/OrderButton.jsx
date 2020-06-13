@@ -1,27 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const OrderButton = () => (
-  <S.Button type="button">
-    Order Now
-  </S.Button>
-);
+const OrderButton = () => <Button type="button">Order Now</Button>;
 
 export default OrderButton;
 
-const S = {};
-S.Button = styled.button`
-  &:focus {
-    outline: 0;
-  }
-  
-  &:hover {
-    background: white;
-    border: 1px solid red;
-    color: red;
-  }  
+const Button = styled.button`
   box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
-
   cursor: pointer;
   color: white;
   font-size: 16px;
@@ -29,7 +14,7 @@ S.Button = styled.button`
   border-radius: 0.8em;
   width: 12em;
   height: 3em;
-  background:red;
+  background: red;
   text-transform: uppercase;
   font-weight: bold;
   font-family: sans-serif;
@@ -40,5 +25,14 @@ S.Button = styled.button`
   overflow: hidden;
   z-index: 1;
   transition: 0.5s;
-  margin: 1em;  
+  margin: 1em;
+
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background: white;
+    border: 1px solid red;
+    color: red;
+  }
 `;

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-// import OrderButton from './OrderButton';
 
-const Nav = styled.header`
+const Navbar = styled.header`
   width: 100%;
   z-index: 1;
   display: flex;
@@ -128,7 +127,7 @@ const Nav = styled.header`
         padding: 20px 0px;
       }
     }
-    
+
     .fa-bars {
       display: inline-block;
       position: absolute;
@@ -144,25 +143,13 @@ const Nav = styled.header`
       flex-wrap: wrap;
       overflow: hidden;
       max-height: 0;
-      -moz-transition-duration: 0.4s;
-      -webkit-transition-duration: 0.4s;
-      -o-transition-duration: 0.4s;
       transition-duration: 0.4s;
-      -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
       transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
       &.is-expanded {
         overflow: hidden;
         max-height: 500px;
-        -moz-transition-duration: 0.4s;
-        -webkit-transition-duration: 0.4s;
-        -o-transition-duration: 0.4s;
         transition-duration: 0.4s;
-        -moz-transition-timing-function: ease-in;
-        -webkit-transition-timing-function: ease-in;
-        -o-transition-timing-function: ease-in;
         transition-timing-function: ease-in;
       }
       li {
@@ -174,7 +161,7 @@ const Nav = styled.header`
   }
 `;
 
-class Navigation extends Component {
+export default class Navigation extends Component {
   constructor(props) {
     super(props);
 
@@ -196,7 +183,7 @@ class Navigation extends Component {
     const { isExpanded } = this.state;
 
     return (
-      <Nav>
+      <Navbar>
         <div className="logo">
           <NavLink to="/">
             <p>
@@ -240,9 +227,8 @@ class Navigation extends Component {
             </NavLink>
           </ul>
         </nav>
-      </Nav>
+      </Navbar>
     );
   }
 }
 
-export default Navigation;

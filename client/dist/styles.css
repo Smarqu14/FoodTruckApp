@@ -1,9 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto&display=swap");
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,24 +12,7 @@ body {
   background: #fafafa;
 }
 
-/* ----------------------- Carousel */
-
-.lp__grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 75px 0px;
-  /* padding: 75px; */
-  border-radius: 0px;
-  background: #ffffff;
-  box-shadow: 5px 5px 10px #a8a8a8, -5px -5px 10px #ffffff;
-}
-.lp__grid__item {
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 35px;
-}
-
+/* ----------------------- Home Component */
 /*...grid item 1...*/
 .lp__grid-col {
   display: grid;
@@ -41,22 +22,6 @@ body {
 .textHolder {
   position: relative;
 }
-.lp__grid-col p {
-  transform: rotate(270deg);
-  height: 24px;
-  margin: 0;
-  position: absolute;
-  bottom: 130px;
-  left: -130px;
-  font-size: 15px;
-}
-.lp__gridImage-1 {
-  height: 580px;
-  background: url("https://freetablephotos.s3-us-west-1.amazonaws.com/4.jpg")
-    no-repeat -300px;
-  background-size: cover;
-}
-
 /*grid item 2 + 3*/
 .lp__subgrid {
   display: grid;
@@ -65,13 +30,7 @@ body {
 .lp__subgrid-sm {
   grid-template-rows: 72px auto;
 }
-.lp__subgrid-sm p {
-  line-height: 1.4;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-  color: black;
-}
+
 .lp__subgrid-md {
   grid-template-rows: 144px auto;
 }
@@ -84,27 +43,8 @@ body {
   display: block;
   /* @extend .text-outline; */
 }
-.lp__gridImage-2 {
-  background: url("https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg")
-    no-repeat right;
-  background-size: cover;
-}
-.lp__gridImage-3 {
-  background: url("https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg")
-    no-repeat center;
-  background-size: cover;
-}
 
 /* ------------------------- */
-.banner {
-  position: s;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-  margin-bottom: 100px;
-}
 
 #slider {
   width: 100%;
