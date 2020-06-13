@@ -12,7 +12,7 @@ const Nav = styled.header`
   padding: 0px 100px 0;
   height: 100px;
   margin-bottom: 60px;
-  background: #121212;
+  background: #111111;
 
   .logo a {
     padding-top: 33px;
