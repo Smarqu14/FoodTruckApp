@@ -8,17 +8,13 @@ const Navbar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 100px 0;
   height: 100px;
-  margin-bottom: 60px;
   background: #111111;
 
   .logo a {
-    padding-top: 33px;
     display: flex;
     flex-direction: column;
     clear: both;
-    padding-bottom: 30px;
     text-decoration: none;
 
     p {

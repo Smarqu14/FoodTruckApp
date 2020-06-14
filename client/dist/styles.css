@@ -5,11 +5,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* background: red; */
 }
 
 body {
   font-family: "Oswald";
-  background: #fafafa;
 }
 
 /* ----------------------- Home Component */
@@ -293,24 +293,3 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Style the container/contact section */
-.container_booking {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column_booking {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row_booking:after {
-  content: "";
-  display: table;
-  clear: both;
-}

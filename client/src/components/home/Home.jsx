@@ -10,7 +10,7 @@ import {
   Griditem,
   Paragraph,
   Paragraph2,
-} from '../styled/style';
+} from '../styled/home';
 
 export default class Home extends Component {
   constructor(props) {

@@ -5,6 +5,12 @@ import NumberFormat from 'react-number-format';
 import Calendar from './Calendar';
 import Steps from './Steps';
 import { data } from '../../data/imagesData';
+import {
+  Wrapper,
+  Section,
+  Griditem,
+  ImageDiv,
+} from '../styled/booking';
 
 const Booking = () => {
   const [idx, setidx] = useState(0);
@@ -32,17 +38,14 @@ const Booking = () => {
   };
 
   return (
-    <div className="container_booking">
-      <h1>Tacolicous, Yummy!</h1>
-      <div>
-        <h4>Steps to reserve tacoTruck</h4>
-        <Steps />
-      </div>
-      <div className="row_booking">
-        <div className="column_booking" onClick={() => handleIndex()}>
-          <img src={data[idx]} alt="tacotruck" width="100%" height="650px" />
-        </div>
-        <div className="column_booking">
+    <Wrapper>
+      <h1>HelloWorld</h1>
+      <Section>
+        <Griditem onClick={() => handleIndex()}>
+          <Steps />
+          <ImageDiv backgroundImage={data[idx]} alt="tacotruck" />
+        </Griditem>
+        <Griditem>
           <form onSubmit={printValues}>
             <input
               type="text"
@@ -84,9 +87,9 @@ const Booking = () => {
             />
             <input type="submit" value="Submit" />
           </form>
-        </div>
-      </div>
-    </div>
+        </Griditem>
+      </Section>
+    </Wrapper>
   );
 };
 

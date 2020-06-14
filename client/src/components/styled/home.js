@@ -3,13 +3,15 @@ import styled from 'styled-components';
 
 // -------------Home.jsx-----------
 export const Wrapper = styled.div`
-  position: s;
+  position: absolute;
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
   margin-bottom: 100px;
+  margin-top: 100px;
+
 `;
 
 export const Section = styled.section`
