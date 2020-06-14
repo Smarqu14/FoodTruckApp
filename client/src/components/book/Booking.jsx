@@ -4,16 +4,9 @@ import React, { useState, useEffect } from 'react';
 import NumberFormat from 'react-number-format';
 import Calendar from './Calendar';
 import Steps from './Steps';
+import { data } from '../../data/imagesData';
 
 const Booking = () => {
-  const images = [
-    'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
-    'https://freetablephotos.s3-us-west-1.amazonaws.com/1.jpg',
-    'https://freetablephotos.s3-us-west-1.amazonaws.com/4.jpg',
-    'https://freetablephotos.s3-us-west-1.amazonaws.com/7.jpg',
-    'https://freetablephotos.s3-us-west-1.amazonaws.com/12.jpg',
-  ];
-
   const [idx, setidx] = useState(0);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -23,7 +16,7 @@ const Booking = () => {
   const [email, setEmail] = useState('');
 
   const handleIndex = () => {
-    const lastIdx = images.length - 1;
+    const lastIdx = data.length - 1;
     const resetIdx = idx === 0;
     const index = resetIdx ? lastIdx : idx - 1;
     return setidx(index);
@@ -32,6 +25,11 @@ const Booking = () => {
   useEffect(() => {
     document.title = firstName;
   }, [firstName]);
+
+  const printValues = (event) => {
+    event.preventDefault();
+    console.log(`Thank you for being interested ${firstName} ${lastName}`);
+  };
 
   return (
     <div className="container_booking">
@@ -42,10 +40,10 @@ const Booking = () => {
       </div>
       <div className="row_booking">
         <div className="column_booking" onClick={() => handleIndex()}>
-          <img src={images[idx]} alt="tacotruck" width="100%" height="650px" />
+          <img src={data[idx]} alt="tacotruck" width="100%" height="650px" />
         </div>
         <div className="column_booking">
-          <form>
+          <form onSubmit={printValues}>
             <input
               type="text"
               id="fname"
