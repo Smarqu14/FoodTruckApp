@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react';
 import NumberFormat from 'react-number-format';
 import Calendar from './Calendar';
@@ -18,6 +20,7 @@ const Booking = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [phoneNumber, setPhoneNumber] = useState('');
   const [specialInstructions, setSpecialInstructions] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleIndex = () => {
     const lastIdx = images.length - 1;
@@ -39,7 +42,7 @@ const Booking = () => {
       </div>
       <div className="row_booking">
         <div className="column_booking" onClick={() => handleIndex()}>
-          <img src={images[idx]} alt="tacotruck" width="100%" />
+          <img src={images[idx]} alt="tacotruck" width="100%" height="650px" />
         </div>
         <div className="column_booking">
           <form>
@@ -56,6 +59,13 @@ const Booking = () => {
               placeholder="Your last name.."
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Your email.."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <NumberFormat
               format="+1 (###) ###-####"

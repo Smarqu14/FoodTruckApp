@@ -272,7 +272,7 @@ h1 {
 
 /* ------------------------------ BOOKINGSECTIN- CATERING*/
 /* Style inputs */
-input[type=text], select, textarea {
+input[type=email], input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
