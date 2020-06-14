@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NumberFormat from 'react-number-format';
 import Calendar from './Calendar';
 import Steps from './Steps';
 
@@ -55,18 +56,15 @@ const Booking = () => {
               placeholder="Your last name.."
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              />
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Phone number.."
-              maxlength="16"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+            <NumberFormat
+              format="+1 (###) ###-####"
+              allowEmptyFormatting
+              mask="_"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               required
             />
-            <small>Format: 123-456-7890</small>
             <Calendar startDate={startDate} setStartDate={setStartDate} />
             <textarea
               id="subject"
