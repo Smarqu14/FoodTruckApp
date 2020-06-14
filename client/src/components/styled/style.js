@@ -55,7 +55,7 @@ export const Paragraph = styled.p`
   bottom: 130px;
   left: -130px;
   font-size: 15px;
-  position: relative;
+  position: absolute;
 `;
 
 export const Paragraph2 = styled.p`

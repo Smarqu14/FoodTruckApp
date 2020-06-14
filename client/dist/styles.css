@@ -19,6 +19,7 @@ body {
   grid-template-columns: 24px auto;
   position: relative;
 }
+
 .textHolder {
   position: relative;
 }

@@ -63,7 +63,7 @@ export default class Home extends Component {
                       {' '}
                     </Paragraph2>
                   </div>
-                  <ImageDivTwo backgroundImage={images[2]} />
+                  <ImageDivTwo backgroundImage={images[1]} />
                 </div>
               </Griditem>
               <Griditem>
@@ -73,7 +73,7 @@ export default class Home extends Component {
                       <OrderButton />
                     </span>
                   </h1>
-                  <ImageDivThree backgroundImage={images[3]} />
+                  <ImageDivThree backgroundImage={images[0]} />
                 </div>
               </Griditem>
             </Section>

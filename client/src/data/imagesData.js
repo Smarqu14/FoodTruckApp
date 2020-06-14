@@ -1,4 +1,5 @@
 export const data = [
+  'https://freetablephotos.s3-us-west-1.amazonaws.com/12.jpg',
   'https://freetablephotos.s3-us-west-1.amazonaws.com/3.jpg',
   'https://freetablephotos.s3-us-west-1.amazonaws.com/8.jpg',
   'https://freetablephotos.s3-us-west-1.amazonaws.com/2.jpg',
