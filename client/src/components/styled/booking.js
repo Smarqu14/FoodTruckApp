@@ -2,11 +2,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-position: absolute;
-right: 0;
-left: 0;
-margin-right: auto;
-margin-left: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
   width: 90%;
   margin-bottom: 100px;
 `;

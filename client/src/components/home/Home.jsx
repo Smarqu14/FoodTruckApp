@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import React, { Component } from 'react';
 import OrderButton from './OrderButton';
 import { data } from '../../data/imagesData';
@@ -38,50 +39,56 @@ export default class Home extends Component {
       images, currentIdx,
     } = this.state;
     return (
-      <>
-        {images.length > 0 ? (
-          <Wrapper>
-            <Section>
-              <Griditem className="lp__grid-col">
-                <div className="textHolder">
-                  <Paragraph>
-                    80,88,96,104,112,120,128,136,144,152,160,168,176
-                  </Paragraph>
-                </div>
-                <ImageDiv
-                  onClick={this.handleFirstImage}
-                  backgroundImage={images[currentIdx]}
-                />
-              </Griditem>
-              <Griditem>
-                <div className="lp__subgrid lp__subgrid-sm">
-                  <div>
-                    <Paragraph2>
-                      {' '}
-                      Food that will make you come back for more.This is
-                      amazing. THIS IS DELICIOUS..
-                      {' '}
-                    </Paragraph2>
-                  </div>
-                  <ImageDivTwo backgroundImage={images[1]} />
-                </div>
-              </Griditem>
-              <Griditem>
-                <div className="lp__subgrid lp__subgrid-md">
-                  <h1>
-                    <span>
-                      <OrderButton />
-                    </span>
-                  </h1>
-                  <ImageDivThree backgroundImage={images[0]} />
-                </div>
-              </Griditem>
-            </Section>
-          </Wrapper>
-        ) : (
-          <p>Loading</p>
-        )}
-      </>
+      <section>
+        <h1>hellos</h1>
+      </section>
     );
   }
 }
+
+{ /*
+    <>
+      {images.length > 0 ? (
+        <Wrapper>
+          <Section>
+            <Griditem className="lp__grid-col">
+              <div className="textHolder">
+                <Paragraph>
+                  80,88,96,104,112,120,128,136,144,152,160,168,176
+                </Paragraph>
+              </div>
+              <ImageDiv
+                onClick={this.handleFirstImage}
+                backgroundImage={images[currentIdx]}
+              />
+            </Griditem>
+            <Griditem>
+              <div className="lp__subgrid lp__subgrid-sm">
+                <div>
+                  <Paragraph2>
+                    {' '}
+                    Food that will make you come back for more.This is
+                    amazing. THIS IS DELICIOUS..
+                    {' '}
+                  </Paragraph2>
+                </div>
+                <ImageDivTwo backgroundImage={images[1]} />
+              </div>
+            </Griditem>
+            <Griditem>
+              <div className="lp__subgrid lp__subgrid-md">
+                <h1>
+                  <span>
+                    <OrderButton />
+                  </span>
+                </h1>
+                <ImageDivThree backgroundImage={images[0]} />
+              </div>
+            </Griditem>
+          </Section>
+        </Wrapper>
+      ) : (
+        <p>Loading</p>
+      )}
+    </>
+       */ }

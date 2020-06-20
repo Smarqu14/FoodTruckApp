@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import NumberFormat from 'react-number-format';
 import Calendar from './Calendar';
 import Steps from './Steps';
@@ -27,10 +27,6 @@ const Booking = () => {
     const index = resetIdx ? lastIdx : idx - 1;
     return setidx(index);
   };
-
-  useEffect(() => {
-    document.title = firstName;
-  }, [firstName]);
 
   const printValues = (event) => {
     event.preventDefault();
