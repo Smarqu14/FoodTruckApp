@@ -1,7 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const OrderButton = () => <Button type="button">Order Now</Button>;
+const OrderButton = () => {
+  return (
+    <div>
+      <h1>Popular Items</h1>
+      <Button type="button">Order Now</Button>
+    </div>
+  );
+};
 
 export default OrderButton;
 
@@ -10,11 +17,12 @@ const Button = styled.button`
   cursor: pointer;
   color: white;
   font-size: 16px;
-  border: 0.3em solid red;
+  border: 0.3em solid green;
   border-radius: 0.8em;
   width: 12em;
   height: 3em;
-  background: red;
+  left: 44.5%;
+  background: green;
   text-transform: uppercase;
   font-weight: bold;
   font-family: sans-serif;
@@ -32,7 +40,7 @@ const Button = styled.button`
   }
   &:hover {
     background: white;
-    border: 1px solid red;
-    color: red;
+    border: 1px solid green;
+    color: green;
   }
 `;

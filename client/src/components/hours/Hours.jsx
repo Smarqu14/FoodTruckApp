@@ -2,12 +2,15 @@ import React from 'react';
 import Map from '../map/Map';
 
 const Hours = () => (
-  <div>
-    <h3>Hours: </h3>
-    <p>Location</p>
-    <div>
+  <div className="row">
+    <h1>HELLO</h1>
+    <h1>HELLO</h1>
+    <h1>HELLO</h1>
+    <h1>HELLO</h1>
+    <h1>HELLO</h1>
+    <h1>HELLO</h1> 
+
       {/* <Map /> */}
-    </div>
   </div>
 );
 

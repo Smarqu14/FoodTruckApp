@@ -1,10 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => (
   <div className="navbar__container">
     <div className="navbar__title row">
-      <NavLink to="/" exact>
+      <NavLink to="/"
+      >
         FoodTruck
       </NavLink>
     </div>

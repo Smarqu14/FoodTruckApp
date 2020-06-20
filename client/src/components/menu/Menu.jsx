@@ -5,7 +5,7 @@ import ProductList from './ProductList';
 
 const Menu = ({ data }) => (
   <div className="menu-wrapper">
-    <div className="row">
+    <div className="row-menu">
       <div className="left">
         <div className="left-column">
           <SideMenu data={data} />

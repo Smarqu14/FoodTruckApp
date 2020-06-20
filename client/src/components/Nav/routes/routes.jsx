@@ -9,7 +9,7 @@ import Order from '../../order/Order';
 
 const Routes = ({ data }) => (
   <Switch>
-    <Route exact path="/" component={Home} />
+    <Route exact path="/" component={Home} exact={true} />
     <Route path="/catering" component={Booking} />
     <Route path="/hours" component={Hours} />
     <Route path="/order" component={Order} />

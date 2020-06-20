@@ -1,44 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-lone-blocks */
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import About from '../about/About';
-import OrderButton from './OrderButton';
-import { data } from '../../data/imagesData';
-import {
-  Wrapper,
-  Section,
-  ImageDiv,
-  ImageDivTwo,
-  ImageDivThree,
-  Griditem,
-  Paragraph,
-  Paragraph2,
-} from '../styled/home';
-
-const BackgroundImage = styled.div`
-  background-image: url("https://freetablephotos.s3-us-west-1.amazonaws.com/mexican.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-`;
-const Slogan = styled.div`
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
-const H1 = styled.h1`
-  word-spacing: 4px;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 240%;
-  letter-spacing: 1px;
-`;
+import React, { Component } from "react";
+import styled from "styled-components";
+import About from "../about/About";
+import OrderButton from "./OrderButton";
+import { data } from "../../data/imagesData";
+import { BackgroundImage, Slogan, H1 } from "../styled/home";
 
 export default class Home extends Component {
   constructor(props) {
@@ -70,7 +37,7 @@ export default class Home extends Component {
             <BackgroundImage />
             <Slogan>
               <H1>
-                {' '}
+                {" "}
                 Delicious, Mobile, and Authentic?
                 <br />
                 Authentic Mexican Food.
@@ -79,12 +46,12 @@ export default class Home extends Component {
                 I’m hungry
               </a>
               <a href="#" className="btn btn-ghost">
-                Show me more
-                {' '}
+                Show me more{" "}
               </a>
             </Slogan>
             <About />
-            <section className="section-meals">
+            <OrderButton/>
+             <section className="section-meals">
               <ul className="meals-showcase clearfix">
                 <li>
                   <figure className="meals-photo">
@@ -149,44 +116,8 @@ export default class Home extends Component {
                     />
                   </figure>
                 </li>
-              </ul>
+              </ul> 
             </section>
-            {/* <Griditem className="lp__grid-col">
-                  <div className="textHolder">
-                    <Paragraph>
-                      80,88,96,104,112,120,128,136,144,152,160,168,176
-                    </Paragraph>
-                  </div>
-                  <ImageDiv
-                    onClick={this.handleFirstImage}
-                    backgroundImage={images[currentIdx]}
-                  />
-                </Griditem>
-                <Griditem>
-                  <div className="lp__subgrid lp__subgrid-sm">
-                    <div>
-                      <Paragraph2>
-                        {' '}
-                        Food that will make you come back for more.This is
-                        amazing. THIS IS DELICIOUS..
-                        {' '}
-                      </Paragraph2>
-                    </div>
-                    <ImageDivTwo backgroundImage={images[1]} />
-                  </div>
-                </Griditem>
-                <Griditem>
-                  <div className="lp__subgrid lp__subgrid-md">
-                    <h1>
-                      <span>
-                        <OrderButton />
-                      </span>
-                    </h1>
-                    <ImageDivThree backgroundImage={images[0]} />
-                  </div>
-                </Griditem> */}
-            {/* </Section>
-            </Wrapper> */}
           </div>
         ) : (
           <p>Loading</p>
