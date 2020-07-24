@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 const About = () => (
   <section className="section-about">
@@ -39,8 +39,8 @@ const About = () => (
             environment, and it also tastes better!
           </p>
         </div>
-        <div >
-        <i className="fas fautensils">Icon</i>
+        <div>
+          <i className="fas fautensils">Icon</i>
           <h3>Order for pick up</h3>
           <p>
             We don't limit your creativity, which means you can order whatever
