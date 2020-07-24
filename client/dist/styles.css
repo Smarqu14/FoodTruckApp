@@ -1,67 +1,444 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto&display=swap");
+
+/*--------------------------------------------------------------*/
+/* BASIC SETUP*/
+/*--------------------------------------------------------------*/
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background: rgba(255, 255, 255, 1);
+html {
+  background: #fff;
+  color: #555;
+  font-family: "Oswald", "sans-serif";
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
 }
-/* --------------------------- Navbar */
-.menu {
+
+/*--------------------------------------------------------------*/
+/* REUSUABLE COMPONENTS*/
+/*--------------------------------------------------------------*/
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*--------------------------------------------------------------*/
+/* HEADER */
+/*--------------------------------------------------------------*/
+
+.navbar__container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: black;
+  color: white;
+}
+.navbar__routes {
+  display: flex;
+  width: 20%;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  justify-content: space-around;
 }
 
-nav {
-  background: rgba(255, 255, 255, 1);
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  padding-top: 5px;
-}
-
-nav a {
+.navbar__routes a {
+  list-style: none;
   text-decoration: none;
-  text-align: center;
-  color: #113760;
+  color: white;
+  margin-bottom: 5px;
+
+}
+.navbar__routes a:hover {
+  border-bottom: 1px solid green; 
+  transition: border-bottom 0.5s;
+}
+.asctive {
+  border-bottom: 1px solid green; 
+}
+
+.navbar__title {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 40px;
+}
+
+.navbar__title a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+/*--------------------------------------------------------------*/
+/* BUTTONS */
+/*--------------------------------------------------------------*/
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+.btn-full:link,
+.btn-full:visited {
+  margin-right: 15px;
+  background-color: green;
+  border: 1px solid green;
+  color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid green;
+  color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: green;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid green;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid green;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------*/
+/* TactoTruck About Section */
+/*--------------------------------------------------------------*/
+
+.section-about {
+  background-color: #f4f4f4;
+}
+
+/*--------------------------------------------------------------*/
+/* PopularItems Images with hover effect*/
+/*--------------------------------------------------------------*/
+
+.section-meals {
+  padding: 0;
+}
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
   display: block;
-  padding: 10px;
-  margin: 20px;
-  font-size: 25px;
+  float: left;
+  width: 25%;
 }
 
-@media screen and (min-width: 768px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  nav li {
-    flex: 1 0;
-  }
-
+.meals-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+.meals-photo img {
+  width: 100%;
+  transform: scale(1.15);
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0.7;
+  height: 300px;
 }
 
-/* ----------------------- Carousel */
-.slider {
-  max-width: 100%;
-  height: 33vw;
-  position: relative;
+.meals-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
 }
-img {
+
+/* -----------------CLEAR FIX */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* -------------------Menu */
+
+.food-list {
+  display: flex;
+  border-radius: 5px;
+  margin-top: 20px;
+  flex-flow: row wrap;
+}
+.item {
+  display: inline-flex;
+  flex-flow: column;
+  background-color: rgba(255, 255, 255, 0.315);
+  margin: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+  width: 250px;
+  height: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.item-info span {
+  float: right;
+}
+#menu-image {
   width: 100%;
   height: 100%;
 }
+/* ------------------Side-menu */
+.menu-wrapper {
+  margin-top: 150px;
+  background: #f8f9fa;
+}
 
-/* -------------------------ButtonOrder */
+.row-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
-.image_order_btn {
+.left {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+}
+
+.right-column {
+  height: 100%;
+}
+
+.left-column {
+  height: 100%;
+}
+
+#table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#table td,
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(76, 163, 175);
+  color: white;
+}
+
+#menu-right {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(76, 163, 175);
+  color: #f2f2f2;
+}
+
+.panel {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+/* ---------------------MODAL */
+.modal-open {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7c7c7d;
+  z-index: 2;
+  overflow: hidden;
+  text-align: center;
+}
+
+.modal {
+  margin: 50px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+#modal-img {
+  width: 100%;
+  height: 500px;
+}
+
+.modal-wrapper {
+  margin: 100px;
+}
+
+.modal-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.modal-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid black;
+  cursor: pointer;
+}
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+}
+
+.modal-right-column {
+  height: 100%;
+}
+
+.modal-left-column {
+  height: 100%;
+}
+.modal-description {
+  margin: 50px;
+}
+
+
+/* ------------------------------ BOOKINGSECTIN- CATERING*/
+/* Style inputs */
+input[type="email"],
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*--------------------------FOOTER ----------------
+----------------------------------------------------*/
+.app__footer {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+}
+
+/*--------------------------HEADINGS ----------------
+----------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h1 {
+  word-spacing: 4px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 240%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* it will appreaf after the tag */
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #1abc9c;
+  /* specify content */
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0 100px;
+}
+
+h3 {
+  font-size: 100%;
+  margin-bottom: 15px;
+}
+
+/* ABOUT SECTION */
+.container-about {
+  display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.long-copy-about {
+  padding: 10px 20px 60px 20px; 
+  font-size:30px;
+  font-weight: 300;
+  text-align: center;
 }

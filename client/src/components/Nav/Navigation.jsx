@@ -1,37 +1,32 @@
-import React, { Component } from 'react';
-import Navitem from './NavItem';
-import OrderButton from './OrderButton';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
+const Navigation = () => (
+  <div className="navbar__container">
+    <div className="navbar__title row">
+      <NavLink to="/"
+      >
+        FoodTruck
+      </NavLink>
+    </div>
+    <div className="navbar__routes row">
+      <NavLink to="/hours" exact>
+        Hours
+      </NavLink>
 
-class Navigation extends Component {
-  constructor(props) {
-    super(props);
+      <NavLink to="/menu" exact>
+        Menu
+      </NavLink>
 
-    this.state = {
-      navItemActive: false,
-    };
-    this.activateitem = this.activateitem.bind(this);
-  }
+      <NavLink to="/" exact>
+        Home
+      </NavLink>
 
-  activateitem() {
-    this.setState((state) => ({
-      navItemActive: !state.navItemActive,
-    }));
-  }
-
-  render() {
-    return (
-      <nav>
-        <ul className="menu">
-          <Navitem item="Hours" tolink="/hours" active={this.activateitem} />
-          <Navitem item="Menu" tolink="/menu" active={this.activateitem} />
-          <Navitem item="Home" tolink="/" active={this.activateitem} />
-          <Navitem item="Book Event" tolink="/booking" active={this.activateitem} />
-          <OrderButton item="Order Now" tolink="/order" active={this.activateitem} />
-        </ul>
-      </nav>
-    );
-  }
-}
+      <NavLink to="/catering" exact>
+        Catering
+      </NavLink>
+    </div>
+  </div>
+);
 
 export default Navigation;
