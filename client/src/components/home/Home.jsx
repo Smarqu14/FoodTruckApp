@@ -1,11 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-lone-blocks */
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import About from '../about/About';
-import OrderButton from './OrderButton';
-import { data } from '../../data/imagesData';
-import { BackgroundImage, Slogan, H1 } from '../styled/home';
+import React, { Component } from "react";
+import styled from "styled-components";
+import About from "../about/About";
+import OrderButton from "./OrderButton";
+import { data } from "../../data/imagesData";
+import { BackgroundImage, Slogan, H1 } from "../styled/home";
 
 export default class Home extends Component {
   constructor(props) {
@@ -37,7 +35,7 @@ export default class Home extends Component {
             <BackgroundImage />
             <Slogan>
               <H1>
-                {' '}
+                {" "}
                 Delicious, Mobile, and Authentic?
                 <br />
                 Authentic Mexican Food.
@@ -46,8 +44,7 @@ export default class Home extends Component {
                 I’m hungry
               </a>
               <a href="#" className="btn btn-ghost">
-                Show me more
-                {' '}
+                Show me more{" "}
               </a>
             </Slogan>
             <About />
