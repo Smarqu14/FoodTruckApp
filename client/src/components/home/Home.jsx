@@ -3,7 +3,15 @@ import styled from "styled-components";
 import About from "../about/About";
 import OrderButton from "./OrderButton";
 import { data } from "../../data/imagesData";
-import { BackgroundImage, Slogan, H1 } from "../styled/home";
+import {
+  Background__H1,
+  Background__Button,
+  Background__Container,
+  Background__Imagecontainer,
+  Background__Content,
+  Background__title,
+} from "../styled/home";
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   constructor(props) {
@@ -32,21 +40,26 @@ export default class Home extends Component {
       <>
         {images.length > 0 ? (
           <div>
-            <BackgroundImage />
-            <Slogan>
-              <H1>
-                {" "}
-                Delicious, Mobile, and Authentic?
-                <br />
-                Authentic Mexican Food.
-              </H1>
-              <a href="#" className="btn btn-full">
-                I’m hungry
-              </a>
-              <a href="#" className="btn btn-ghost">
-                Show me more{" "}
-              </a>
-            </Slogan>
+            <Background__Container>
+              <Background__Imagecontainer />
+              <Background__Content>
+                <Background__title>
+                  <Background__H1>
+                    {" "}
+                    Delicious, Mobile, and Authentic?
+                    <br />
+                    Authentic Mexican Food.
+                  </Background__H1>
+                  <Link to="/menu">
+                    <Background__Button>I am hungry</Background__Button>{" "}
+                  </Link>{" "}
+                  <Link to="#">
+                    <Background__Button>Show me more</Background__Button>{" "}
+                  </Link>
+                </Background__title>
+              </Background__Content>
+            </Background__Container>
+
             <About />
             <OrderButton />
             <section className="section-meals">
@@ -124,3 +137,26 @@ export default class Home extends Component {
     );
   }
 }
+
+// <Slogan>
+//   <H1>
+//     {" "}
+//     Delicious, Mobile, and Authentic?
+//     <br />
+//     Authentic Mexican Food.
+//   </H1>
+//   <ButtonContainer>
+//     <Link to="/contact">
+//       <button>I am hungry</button>
+//     </Link>
+//     <Link to="/menu">
+//       <button>Show me more</button>
+//     </Link>
+//   </ButtonContainer>
+//   {/* <a href="#" className="btn btn-full">
+//     I’m hungry
+//   </a>
+//   <a href="/menu" className="btn btn-ghost">
+//     Show me more{" "}
+//   </a> */}
+// </Slogan>

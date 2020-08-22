@@ -24,10 +24,10 @@ html {
 /* REUSUABLE COMPONENTS*/
 /*--------------------------------------------------------------*/
 
-/* .row {
+.row {
   max-width: 1140px;
   margin: 0 auto;
-} */
+}
 
 section {
   padding: 80px 0;
@@ -36,45 +36,6 @@ section {
 /*--------------------------------------------------------------*/
 /* BUTTONS */
 /*--------------------------------------------------------------*/
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  padding: 10px 30px;
-  font-weight: 300;
-  text-decoration: none;
-  border-radius: 200px;
-  transition: background-color 0.3s, border 0.3s, color 0.3s;
-}
-.btn-full:link,
-.btn-full:visited {
-  margin-right: 15px;
-  background-color: green;
-  border: 1px solid green;
-  color: #fff;
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-  border: 1px solid green;
-  color: #fff;
-}
-
-.btn:hover,
-.btn:active {
-  background-color: green;
-}
-
-.btn-full:hover,
-.btn-full:active {
-  border: 1px solid green;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-  border: 1px solid green;
-  color: #fff;
-}
 
 /*--------------------------------------------------------------*/
 /* TactoTruck About Section */
