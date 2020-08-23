@@ -41,17 +41,34 @@ export const Background__title = styled.div`
 `;
 
 export const Background__Button = styled.button`
+  box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
+  cursor: pointer;
   color: white;
-  font-size: 1em;
+  font-size: 16px;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid green;
-  border-radius: 20px;
-  font-weight: 300;
-  background: green;
+  background: darkgreen;
 
+  border: 0.3em solid green;
+  border-radius: 0.8em;
+  font-weight: 300;
+  width: 12em;
+  height: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+
+  &:focus {
+    outline: 0;
+  }
   &:hover {
-    background: lightgreen;
-    transition: border-bottom 0.5s;
+    background: transparent;
+    border: 1px solid green;
+    color: color;
   }
 `;

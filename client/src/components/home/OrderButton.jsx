@@ -4,7 +4,6 @@ import styled from "styled-components";
 const OrderButton = () => {
   return (
     <div>
-      <h1>Popular Items</h1>
       <Button type="button">Order Now</Button>
     </div>
   );

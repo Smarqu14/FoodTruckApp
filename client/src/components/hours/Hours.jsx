@@ -1,5 +1,4 @@
-import React from 'react';
-import Map from '../map/Map';
+import React from "react";
 
 const Hours = () => (
   <div className="row">
@@ -8,9 +7,7 @@ const Hours = () => (
     <h1>HELLO</h1>
     <h1>HELLO</h1>
     <h1>HELLO</h1>
-    <h1>HELLO</h1> 
-
-      {/* <Map /> */}
+    <h1>HELLO</h1>
   </div>
 );
 
