@@ -1,78 +1,68 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import styled from "styled-components";
 
-const PopularSection = ({ images }) => (
-  <>
-    <Fade left>
-      <h1>
-        <a id="popular-items"> Popular items</a>
-      </h1>
-      <section className="section-meals">
-        <ul className="meals-showcase clearfix">
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[0]}
-                alt="Korean bibimbap with egg and vegetables"
-              />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[1]}
-                alt="Simple italian pizza with cherry tomatoes"
-              />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[3]}
-                alt="Chicken breast steak with vegetables "
-              />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[3]}
-                alt="Chicken breast steak with vegetables "
-              />
-            </figure>
-          </li>
-        </ul>
-        <ul className="meals-showcase clearfix">
-          <li>
-            <figure className="meals-photo">
-              <img src={images[3]} alt="Paleo beef steak with vegetables" />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[0]}
-                alt="Healthy baguette with egg and vegetables"
-              />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img src={images[1]} alt="Burger with cheddar and bacon" />
-            </figure>
-          </li>
-          <li>
-            <figure className="meals-photo">
-              <img
-                src={images[1]}
-                alt="Granola with cherries and strawberries"
-              />
-            </figure>
-          </li>
-        </ul>
-      </section>
-    </Fade>
-    ;
-  </>
-);
+const Section__Container = styled.section`
+  padding: 0;
+`;
+
+const Section__List = styled.ul`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Section__Figure = styled.figure`
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+
+  img {
+    width: 100%;
+    transform: scale(1.15);
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.7;
+    height: 300px;
+
+    &:hover {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+  }
+`;
+
+const PopularSection = ({ images }) => {
+  const imagesAltOne = [
+    "Korean bibimbap with egg and vegetables",
+    "Simple italian pizza with cherry tomatoes",
+    "Chicken breast steak with vegetables",
+    "Chicken breast steak with vegetables ",
+  ];
+
+  const itemLists = images.map((img, index) => {
+    return (
+      <li>
+        <Section__Figure>
+          <img src={img} alt={imagesAltOne[index]} />
+        </Section__Figure>
+      </li>
+    );
+  });
+
+  return (
+    <>
+      <Fade left>
+        <h1>
+          <a id="popular-items"> Popular items</a>
+        </h1>
+        <Section__Container>
+          <Section__List>{itemLists}</Section__List>
+          <Section__List>{itemLists}</Section__List>
+        </Section__Container>
+      </Fade>
+      ;
+    </>
+  );
+};
+
 export default PopularSection;
