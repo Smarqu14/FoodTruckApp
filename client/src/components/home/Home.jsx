@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import About from "../about/About";
+import PopularSection from "./PopularSection";
 import OrderButton from "./OrderButton";
 import { data } from "../../data/imagesData";
+
 import {
   Background__H1,
   Background__Button,
@@ -12,8 +14,6 @@ import {
   Background__title,
 } from "../styled/home";
 import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
-import Reveal from "react-reveal/Reveal";
 
 export default class Home extends Component {
   constructor(props) {
@@ -62,82 +62,7 @@ export default class Home extends Component {
               </Background__Content>
             </Background__Container>
             <About />
-
-            <Fade left>
-              <h1>
-                <a id="popular-items"> Popular items</a>
-              </h1>
-              <section className="section-meals">
-                <ul className="meals-showcase clearfix">
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[0]}
-                        alt="Korean bibimbap with egg and vegetables"
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[1]}
-                        alt="Simple italian pizza with cherry tomatoes"
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[3]}
-                        alt="Chicken breast steak with vegetables "
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[3]}
-                        alt="Chicken breast steak with vegetables "
-                      />
-                    </figure>
-                  </li>
-                </ul>
-                <ul className="meals-showcase clearfix">
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[3]}
-                        alt="Paleo beef steak with vegetables"
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[0]}
-                        alt="Healthy baguette with egg and vegetables"
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[1]}
-                        alt="Burger with cheddar and bacon"
-                      />
-                    </figure>
-                  </li>
-                  <li>
-                    <figure className="meals-photo">
-                      <img
-                        src={images[1]}
-                        alt="Granola with cherries and strawberries"
-                      />
-                    </figure>
-                  </li>
-                </ul>
-              </section>
-            </Fade>
+            <PopularSection images={images} />
           </div>
         ) : (
           <p>Loading</p>
