@@ -1,15 +1,19 @@
-/* eslint-disable import/prefer-default-export */
+import Fade from "react-reveal/Fade";
+import withReveal from "react-reveal/withReveal";
 import styled from "styled-components";
+import React from "react";
 
-// ----------------------------
-export const Background__H1 = styled.h1`
-  word-spacing: 4px;
-  margin-top: 0;
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: 240%;
-  letter-spacing: 1px;
-`;
+export const Background__H1 = withReveal(
+  styled.h1`
+    word-spacing: 4px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    letter-spacing: 1px;
+  `,
+  <Fade left />
+);
 
 export const Background__Container = styled.figure`
   display: flex;
