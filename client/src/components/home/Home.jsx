@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import About from "../about/About";
 import PopularSection from "./PopularSection";
-import OrderButton from "./OrderButton";
 import { data } from "../../data/imagesData";
+import Fade from "react-reveal/Fade";
 
 import {
   Background__H1,
@@ -25,6 +25,7 @@ export default class Home extends Component {
     this.handleFirstImage = this.handleFirstImage.bind(this);
   }
 
+  // might need to delete
   handleFirstImage() {
     const { images, currentIdx } = this.state;
     const lastIdx = images.length - 1;
@@ -71,26 +72,3 @@ export default class Home extends Component {
     );
   }
 }
-
-// <Slogan>
-//   <H1>
-//     {" "}
-//     Delicious, Mobile, and Authentic?
-//     <br />
-//     Authentic Mexican Food.
-//   </H1>
-//   <ButtonContainer>
-//     <Link to="/contact">
-//       <button>I am hungry</button>
-//     </Link>
-//     <Link to="/menu">
-//       <button>Show me more</button>
-//     </Link>
-//   </ButtonContainer>
-//   {/* <a href="#" className="btn btn-full">
-//     I’m hungry
-//   </a>
-//   <a href="/menu" className="btn btn-ghost">
-//     Show me more{" "}
-//   </a> */}
-// </Slogan>

@@ -4,7 +4,9 @@ import styled from "styled-components";
 const OrderButton = () => {
   return (
     <div>
-      <Button type="button">Order Now</Button>
+      <Button type="button" id="popular-items">
+        Order Now
+      </Button>
     </div>
   );
 };
