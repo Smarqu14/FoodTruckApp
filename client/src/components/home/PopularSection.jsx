@@ -1,7 +1,8 @@
 import React from "react";
+import OrderButton from "./OrderButton";
+
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import OrderButton from "./OrderButton";
 
 const Section__Container = styled.section`
   padding: 0;
@@ -54,7 +55,6 @@ const PopularSection = ({ images }) => {
     <>
       <Fade left>
         <OrderButton />
-
         <Section__Container>
           <Section__List>{itemLists}</Section__List>
           <Section__List>{itemLists}</Section__List>
